@@ -37,13 +37,6 @@ View the [**Full Presentation**](https://drive.google.com/file/d/1relEJzb5GFxtIV
 
 ---
 
-### 🚀 Future Enhancements
-- Real-time podcast transcription & AI-based exploration  
-- More language support for broader accessibility  
-- Integration with additional LLMs for smarter understanding  
-- Richer, interactive dashboards
-
----
 
 ### 🙌 Conclusion
 IntelliResearch transforms complex PDFs into understandable insights with just a few clicks. It’s your intelligent research partner—capable of processing, reasoning, and visualizing like a human assistant.
