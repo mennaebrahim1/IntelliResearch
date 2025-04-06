@@ -14,14 +14,15 @@ IntelliResearch is an AI-powered document analysis system designed to revolution
 ### 🧠 System Architecture
 1. **Document Upload & Parsing**  
    PDFs are uploaded, parsed for both text and images using OCR and other techniques.
+   https://github.com/mennaebrahim1/IntelliResearch/issues/1
 
-2. **Summarization & Q&A**  
+3. **Summarization & Q&A**  
    Gemini 1.5 Pro processes the content to produce structured summaries and academic questions.
 
-3. **Multilingual Chat & Visualization**  
+4. **Multilingual Chat & Visualization**  
    Supports intelligent conversations, visual dashboards, and cross-language understanding.
 
-4. **RAG Integration**  
+5. **RAG Integration**  
    Uses a custom Retrieval-Augmented Generation pipeline:
    - Extract text & images
    - Chunk data, embed, and index with ChromaDB
