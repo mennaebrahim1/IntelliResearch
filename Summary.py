@@ -91,6 +91,7 @@ def Model(text_str):
 
 # --- Main Execution Pipeline ---
 def process_pdfs_in_directory(directory_path):
+    text_str = ""
     for filename in os.listdir(directory_path):
         if filename.endswith('.pdf'):
             file_path = os.path.join(directory_path, filename)
@@ -100,15 +101,33 @@ def process_pdfs_in_directory(directory_path):
             images = pdf_to_images(file_path, output_folder)
 
             # Extract text
-            text_str = ""
             for image in images:
                 extracted_text_df = extract_text_easyocr(image)
                 extracted_text_str = ' '.join(extracted_text_df['text'].astype(str).tolist())
                 text_str += extracted_text_str + " "
 
-            # Generate and print result
-            result = Model(text_str)
-            print(f"\n\n===== Summary for: {filename} =====\n")
-            print(result)
-            print("\n=========================================\n")
+    # Generate and print result
+    result = Model(text_str)
+    print(f"\n\n===== Summary for: {filename} =====\n")
+    print(result)
+    print("\n=========================================\n")
+        # Extract summary and questions from the response
+    response_text = result
+    if ("## Generated Questions" in response_text) or ("## الأسئلة المُولّدة" in response_text):
+        if ("## Generated Questions" in response_text):
+            summary_text, questions_section = response_text.split("## Generated Questions", 1)
+        else:
+            summary_text, questions_section = response_text.split("## الأسئلة المُولّدة", 1)
+        # Extract questions individually
+        questions = [q.strip() for q in questions_section.splitlines() if q.strip()]
+    else:
+        # Handle case where separator is missing
+        summary_text = response_text  # Assume the whole response is the summary
+        questions = []  # No questions were generated
+
+    # Return the structured result
+    return {
+        "summary": summary_text.strip(),
+        "questions": questions
+    }
 
