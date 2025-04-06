@@ -30,7 +30,7 @@ IntelliResearch is an AI-powered document analysis system designed to revolution
    - Apply routing logic and corrective RAG for refined responses
 
 ---
-
+![Image](https://github.com/user-attachments/assets/f20a23ca-c1c4-449a-95da-634b1f5ba4ba)
 ### 🎬 Demo & Impact
 Check out our live [**Demo Video**](https://drive.google.com/file/d/1g5LKsKxZzSSCeGrwpXY9e-bo9_mXcfwt/view)  
 View the [**Full Presentation**](https://drive.google.com/file/d/1relEJzb5GFxtIVp2kOb8oUDTchjdoyVV/view)
